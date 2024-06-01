@@ -6,15 +6,14 @@
 trigger:
 - none
 
+pool: my-personal-computer
+
 variables:
   # Azure Resource Manager connection created during pipeline creation
   azureSubscription: 'aaa362e3-476c-4f00-980e-fdf55a71d0c5'
 
   # Function app name
   functionAppName: 'rajashrisfunctionapp'
-
-pool: my-personal-computer
-
 
   # Working Directory
   # workingDirectory: '.'
@@ -26,8 +25,7 @@ stages:
   jobs:
   - job: Build
     displayName: Build
-    pool:
-      vmImage: $(vmImageName)
+    pool: my-personal-computer
 
     steps:
     - task: DotNetCoreCLI@2
@@ -59,8 +57,7 @@ stages:
   - deployment: Deploy
     displayName: Deploy
     environment: 'development'
-    pool:
-      vmImage: $(vmImageName)
+    pool: my-personal-computer
 
     strategy:
       runOnce:
