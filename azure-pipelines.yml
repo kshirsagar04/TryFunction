@@ -6,8 +6,7 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+pool: my-personal-computer
 
 steps:
 - script: echo Hello, world!
@@ -17,11 +16,3 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-
-- task: AzureFunctionApp@2
-  inputs:
-    connectedServiceNameARM: 'Free Trial (b63df6bf-b1e2-4031-9a23-2ee1c6f35890)'
-    appType: 'functionApp'
-    appName: 'rajashrisfunctionapp'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    deploymentMethod: 'auto'
