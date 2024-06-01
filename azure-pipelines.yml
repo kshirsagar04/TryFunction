@@ -17,7 +17,7 @@ variables:
   pool: my-personal-computer
 
   # Working Directory
-  workingDirectory: '.'
+  #workingDirectory: '.'
 
 stages:
 - stage: Build
@@ -33,8 +33,8 @@ stages:
       displayName: Build
       inputs:
         command: 'build'
-        projects: |
-          $(workingDirectory)/*.csproj
+        #projects: |
+          #$(workingDirectory)/*.csproj
         arguments: --output $(System.DefaultWorkingDirectory)/publish_output --configuration Release
 
     - task: ArchiveFiles@2
