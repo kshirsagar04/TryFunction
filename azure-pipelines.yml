@@ -14,7 +14,7 @@ variables:
   value: 'Got it'
 
 steps:
-- script: echo Hello, world!
+- script: echo Here is the value -!
 - script: echo $(my-bare-variable) 
   displayName: 'displayName'
 
