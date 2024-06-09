@@ -10,7 +10,7 @@ pool: my-personal-computer
 
 steps:
 - script: echo Hello, world!
-  displayName: 'Run a one-line script'
+  displayName: 'displayName'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
