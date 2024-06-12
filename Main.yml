@@ -8,10 +8,15 @@ trigger:
 
 pool: my-personal-computer
 
-steps:
+variables:
+- group: "my-variable-group"
 
+steps:
 - template: TryTemplate.yaml  # Template reference
+
 - script: echo Hello, world!
+- script: echo $(Group1)
+
   displayName: 'Run a one-line script'
 
 - script: |
