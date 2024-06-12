@@ -17,7 +17,7 @@ steps:
 
 - script: |
     echo "Hello, world!"
-    echo "Group1: ${{ Group1 }}"
+    echo "Group1: $(Group1)"
   displayName: 'Run a one-line script'
 
 - script: |
