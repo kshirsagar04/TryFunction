@@ -15,7 +15,7 @@ steps:
 - template: TryTemplate.yaml  # Template reference
 
 - script: echo Hello, world!
-- script: echo $(Group1)
+- script: echo "$(Group1)""
 
   displayName: 'Run a one-line script'
 
