@@ -9,7 +9,7 @@ trigger:
 pool: my-personal-computer
 
 variables:
-- group: "my-variable-group"
+- group: "DevGroup"
 
 steps:
 - template: TryTemplate.yaml  # Template reference
