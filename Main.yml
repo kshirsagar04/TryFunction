@@ -9,6 +9,8 @@ trigger:
 pool: my-personal-computer
 
 steps:
+
+- template: TryTemplate.yaml  # Template reference
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
@@ -17,4 +19,3 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- template: TryTemplate.yaml  # Template reference
